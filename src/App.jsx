@@ -1,8 +1,10 @@
+import JokeButton from './components/JokeButton';
+import robotGif from '../assets/robot.gif';
 
 function App() {
   return (
-    <div className='App'>
-      <h1>Hello</h1>
+    <div className='container' style={{ backgroundImage: `url(${robotGif})` }}>
+      <JokeButton />
     </div>
   );
 }

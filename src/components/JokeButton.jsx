@@ -1,19 +1,36 @@
 import { useState } from 'react';
 import { getJoke } from '../api/jokeService';
+import VoiceRSS from '../api/voiceService';
 
 function JokeButton() {
-  const [audioSrc, setAudioSrc] = useState('');
   const [disabled, setDisabled] = useState(false);
 
   const handleJoke = async () => {
     setDisabled(true);
-    const joke = await getJoke();
+    const jokeResponse = await getJoke();
 
-    if (joke) {
-      const audio = new Audio(joke.audioSrc);
-      setAudioSrc(joke.audioSrc);
-      audio.play();
-      audio.onended = () => setDisabled(false);
+    if (jokeResponse) {
+      const jokeText = jokeResponse.audioSrc;
+
+      console.log('Tell me a joke:', jokeText);
+
+      VoiceRSS.speech({
+        text: jokeText,
+        callback: (audioUrl) => {
+          const audioElement = new Audio(audioUrl);
+          audioElement
+            .play()
+            .then(() => {
+              audioElement.onended = () => setDisabled(false);
+            })
+            .catch((error) => {
+              console.error('Error playing the audio:', error);
+              setDisabled(false);
+            });
+        },
+      });
+    } else {
+      setDisabled(false);
     }
   };
 
@@ -22,7 +39,6 @@ function JokeButton() {
       <button id='button' disabled={disabled} onClick={handleJoke}>
         Tell Me A Joke
       </button>
-      <audio id='audio' controls hidden src={audioSrc}></audio>
     </>
   );
 }
