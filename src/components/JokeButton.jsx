@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { getJoke } from '../api/jokeService';
 import VoiceRSS from '../api/voiceService';
 
-function JokeButton() {
+function JokeButton({ setJokeText }) {
   const [disabled, setDisabled] = useState(false);
 
   const handleJoke = async () => {
@@ -13,6 +14,7 @@ function JokeButton() {
       const jokeText = jokeResponse.audioSrc;
 
       console.log('Tell me a joke:', jokeText);
+      setJokeText(jokeText);
 
       VoiceRSS.speech({
         text: jokeText,
@@ -42,5 +44,9 @@ function JokeButton() {
     </>
   );
 }
+
+JokeButton.propTypes = {
+  setJokeText: PropTypes.func.isRequired,
+};
 
 export default JokeButton;

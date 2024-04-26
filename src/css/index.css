@@ -47,6 +47,13 @@ button:disabled {
   filter: brightness(30%);
 }
 
+.animated-text {
+  color: #fff;
+  font-size: 24px;
+  padding: 20px;
+  text-align: center;
+}
+
 /* Media Query: Tablet or smaller*/
 @media screen and (max-width: 1000px) {
   .container {
