@@ -1,4 +1,19 @@
+/**
+ * Service module for handling text-to-speech functionality.
+ * @module voiceService
+ */
+
+/**
+ * Object representing the VoiceRSS service.
+ * @const {object} VoiceRSS
+ */
 const VoiceRSS = {
+  /**
+   * Function to generate speech from text using VoiceRSS API.
+   * @param {Object} options - Options for speech generation.
+   * @param {string} options.text - The text to convert to speech.
+   * @param {Function} options.callback - Callback function to handle the generated audio URL.
+   */
   speech: function ({ text, callback }) {
     const settings = {
       key: 'eccbfed46e934467b7eba1b07b7e2cf8',
