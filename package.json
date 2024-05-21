@@ -1,5 +1,5 @@
 {
-  "name": "react_joke-teller",
+  "name": "advancedJS_joke-teller",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://shcoobz.github.io/react_joke-teller/",
+  "homepage": "https://shcoobz.github.io/advancedJS_joke-teller/",
   "dependencies": {
     "prop-types": "^15.8.1",
     "react": "^18.2.0",

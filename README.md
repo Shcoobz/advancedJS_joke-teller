@@ -1,10 +1,10 @@
-# react_Joke Teller: [LIVE DEMO](https://shcoobz.github.io/react_joke-teller/)
+# advancedJS_Joke Teller: [LIVE DEMO](https://shcoobz.github.io/advancedJS_joke-teller/)
 
-![react_Joke Teller](assets/react_joke-teller.png)
+![advancedJS_Joke Teller](assets/advancedJS_joke-teller.png)
 
 ## Summary
 
-react_Joke Teller provides a fun and interactive way to enjoy jokes with an animated text display synchronized with audio. It features a user-friendly interface that allows users to easily fetch and listen to jokes.
+advancedJS_Joke Teller provides a fun and interactive way to enjoy jokes with an animated text display synchronized with audio. It features a user-friendly interface that allows users to easily fetch and listen to jokes.
 
 The core functionality includes:
 
@@ -41,6 +41,6 @@ The joke is read aloud using text-to-speech technology, allowing users to listen
 
 ---
 
-_Note: This document provides an overview of react_Joke-teller. For detailed instructions and more information, please refer to the source code documentation._
+_Note: This document provides an overview of advancedJS_Joke-teller. For detailed instructions and more information, please refer to the source code documentation._
 
 _This project is a conversion from an earlier version built with vanilla JavaScript and HTML, available [here](https://github.com/Shcoobz/basicJS_joke-teller/). This conversion integrates React to enhance UI reactivity and maintainability._

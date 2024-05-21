@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/react_joke-teller/',
+  base: '/advancedJS_joke-teller/',
   build: {
     outDir: 'build',
   },
